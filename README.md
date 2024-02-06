@@ -1,2 +1,2 @@
 # bookbot
-boot.dev bookbot guided project
+It's the first project in my GitHub account
