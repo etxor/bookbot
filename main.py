@@ -3,7 +3,6 @@ def main():
     text = get_book_text(book_path)
     words_count = count_words(text)
     chars_count = count_chars(text)
-    chars_count.sort(reverse=True, key=sort_on)
     report = get_report(book_path, words_count, chars_count)
     print(report)
 
@@ -17,7 +16,9 @@ def count_words(text):
 
 def count_chars(text):
     chars_dict = get_chars_dict(text)
-    return get_chars_list(chars_dict)
+    chars_list = get_chars_list(chars_dict)
+    chars_list.sort(reverse=True, key=sort_on)
+    return chars_list 
 
 def get_chars_dict(text):
     chars = {}
